@@ -83,7 +83,7 @@ def initWebServer(options = {}):
                 app.merge({
                         '/': {
                                 'tools.auth_basic.on':            True,
-                                'tools.auth_basic.realm':         'SickBeard',
+                                'tools.auth_basic.realm':         options.get('realm', 'SickBeard'),
                                 'tools.auth_basic.checkpassword': checkpassword
                         }
                 })
